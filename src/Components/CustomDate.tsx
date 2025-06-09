@@ -1,6 +1,7 @@
 type DateProps = {
   label: string;
   smallText?: string;
+  name: string;
 };
 
 const CustomDate = (props: DateProps) => {
@@ -9,6 +10,7 @@ const CustomDate = (props: DateProps) => {
       <label htmlFor="">{props.label}</label>
       <small className="text-gray-500">{props.smallText}</small>
       <input
+        name={props.name}
         type="date"
         className="w-36 p-1"
         style={{
