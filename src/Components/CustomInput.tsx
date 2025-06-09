@@ -2,6 +2,7 @@ type InputProps = {
   label: string;
   type: string;
   smallText?: string;
+  name: string;
 };
 
 const CustomInput = (props: InputProps) => {
@@ -10,6 +11,7 @@ const CustomInput = (props: InputProps) => {
       <label className="text-sm">{props.label}</label>
       <small className="text-gray-500">{props.smallText}</small>
       <input
+        name={props.name}
         className="p-1"
         type={props.type}
         style={{
